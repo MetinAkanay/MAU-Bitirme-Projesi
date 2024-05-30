@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sablon.master.cs" Inherits="master.sablon" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+         <div class="container">
+
+          
+                     <div class="row">
+                        <div class="col-md-5">
+                            <a href="index.aspx"><img src="img/loqo.png" class="img-responsive" style="widht:300px; height:150px; margin-bottom:10px; margin-left:50px;" /></a>
+                             
+                        </div>
+
+                        <div class="col-md-4" class="text-center">
+
+                            <asp:TextBox ID="ara" runat="server" CssClass="form-control" style="margin-top:60px; margin-left:-100px;" placeholder="Arayacağınız Ürün Adını Giriniz..."></asp:TextBox>
+                        </div>
+
+                        <div class="col-md-1">
+
+                            <asp:Button ID="Button1" runat="server" CssClass="btn btn-success" Text="Ara" style="width: 80px; margin-top:60px; margin-left:-125px;" onclick="Button1_Click" />
+                        </div>
+                         <asp:Label ID="hata" runat="server" Text="" style="color:Red;"></asp:Label>
+
+                         <div class="col-md-2" style="margin-top:20px;"> <a href="onerivesikayet.aspx"><img src="img/onerisikayetresim.png" style="width:180px; height:100px;" /></a></div>
+                    </div>
+
+                   
+                    
+
+                    <nav class="navbar navbar-inverse" style="margin-top:0px;">
+                      <div class="container-fluid">
+                       
+                        <ul class="nav navbar-nav">
+                          <li><a href="index.aspx"><span class="glyphicon glyphicon-home"></span> Anasayfa</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Erkek Bebek
+                                <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                  <li><a href="erkekbebekpijamaesofman.aspx">Pijama-Eşofman</a></li>
+                                  <li><a href="erkekbebekpantolon.aspx">Pantolon</a></li>
+                                  <li><a href="erkekbebeksortkapri.aspx">Şort ve Kapri</a></li>
+                                 
+                                </ul>
+                                 </li>
+
+                                  <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kız Bebek
+                                <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                  <li><a href="kizbebekpijamaesofman.aspx">Pijama-Eşofman</a></li>
+                                  <li><a href="kizbebekpantolonetek.aspx">Pantolon-Etek</a></li>
+                                  <li><a href="kizbebekelbise.aspx">Elbise</a></li>
+                                
+                                </ul>
+                                </li>
+
+
+                                 <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Erkek Çocuk
+                                <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                  <li><a href="erkekcocukgomlek.aspx">Gömlek</a></li>
+                                  <li><a href="erkekcocuktshirtsweat.aspx">T-shirt,Sweat</a></li>
+                                  <li><a href="erkekcocukpantolon.aspx">Pantolon</a></li>
+                                 
+                                </ul>
+                                </li>
+
+
+                                 <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kız Çocuk
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="kizcocukkazakhirkavetriko.aspx">Kazak-Hırka ve Triko</a></li>
+                                  <li><a href="kizcocuktshirtsweat.aspx">T-shirt,Sweat</a></li>
+                                  <li><a href="kizcocuktayt.aspx">Tayt</a></li>
+                                 
+                                </ul>
+                                 </li>
+                           
+                              <li><a href="uyeuruneklelistele.aspx">2.el Ürünler</a></li>
+                            
+                                 
+        
+                               
+                               
+                         
+                        </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                              <li><a href="uyeol.aspx"><span class="glyphicon glyphicon-user"></span> Kayıt Ol</a></li>
+                              <li><a href="girisyap.aspx" id="giris" runat="server"><span class="glyphicon glyphicon-log-in"></span> Giriş Yap</a></li>
+                               <li><a href="" id="kull" runat="server">Merhaba Ziyaretçi </a></li>
+                               <li><a href="cikis.aspx" id="cikis" runat="server"><span class="glyphicon glyphicon-log-out"></span> Çıkış</a></li>
+
+                              <li><a href="sepet.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Sepet</a></li>
+                           </ul>
+                      </div>
+                    </nav>
+
+                
+
+
+
+
+
+
+
+
+                <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+     
+                </asp:ContentPlaceHolder>
+                
+                <div class="container">
+
+                <div class="row" style="background-color:ThreeDLighShadow; margin-left:60px;">
+                    <div class="col-md-4">
+                    <h2>İletişim</h2>
+                    
+                    
+                    <a href="onerivesikayet.aspx" style="color:Red; font-size:16px; text-decoration:none;">Öneri&Şikayet</a>
+                    <br />
+                    <a href="hakkimizda.aspx" style="color:Red; font-size:16px; text-decoration:none;">Hakkımızda</a>
+                    <br />
+                    <a href="magazalarimiz.aspx" style="color:Red; font-size:16px; text-decoration:none;">Mağazalarımız</a>
+                    <br />
+                    </div>
+
+                      <div class="col-md-4">
+                          <img src="img/yardim.png" class="img-responsive" />
+                    </div>
+
+
+                    <div class="col-md-4">
+                    <h2>Bizi Takip Edin</h2>
+
+                   <div style="" id="bizitakipetelemanlar">
+						<img src="img/ikonface.png" width="23px" height="23px">
+						<a href="#" style="text-decoration: none; color:black;"><li style="margin-top:-22px; margin-left:30px; font-size:17px; list-style-type:none;">Facebook</li></a>
+
+						<img src="img/instaikon.png" width="23px" height="23px" style="margin-top:8px;">
+						<a href="#" style="text-decoration: none; color:black;"><li style="margin-top:-22px; margin-left:30px; font-size:17px; list-style-type:none;">İnstagram</li></a>
+
+
+						<img src="img/ikontwitter.png" width="23px" height="23px" style="margin-top:8px;">
+						<a href="#"  style="text-decoration: none; color:black;"><li style="margin-top:-22px; margin-left:30px; font-size:17px; list-style-type:none;">Twitter</li></a>
+						
+						
+
+					</div>
+                    </div>
+
+                   
+                </div>
+           
+         </div>
+         </div>
+    </form>
+</body>
+</html>
